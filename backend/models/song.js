@@ -1,13 +1,14 @@
 import mongoose from 'mongoose'
 
 const songSchema = new mongoose.Schema({
-    name:{type:String,required:true},
-    artist:{type:[]},
-    genre:{type:String},
-    duration:{type:Number},
-    likes:{type:[]},
-    playCount:{type:Number},
-
+    title:{type:String,required:true},
+    artists:{type:[]},
+    genre:{type:[]},
+    duration:{type:String},
+    likes:{type:[],default:[]},
+    path:{type:String,required:true},
+    playCount:{type:Number,default:0},
+    releaseDate:{type:String}
 },{timestamps:true})
 
 export const Song = mongoose.model("Song",songSchema)
