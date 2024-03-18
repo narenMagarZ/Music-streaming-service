@@ -5,13 +5,12 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    gmail:{
+    email:{
         type:String,
         required:true,
         unique:true
     },
-    googleId:{type:String,unique:true},
-    profilePic:{type:String,unique:true},
+    image:{type:String,unique:true},
     playlists:[],
     likedSongs:[]
 },{timestamps:true})
